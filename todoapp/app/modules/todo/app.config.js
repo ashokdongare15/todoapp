@@ -12,12 +12,15 @@
         $locationProvider.html5Mode(true);
 
         $stateProvider.state('dashboard', {
-            url: '/dashboard',
+            url: '/',
             templateUrl: '/app/partials/dashboard.html',
             controller: 'DashboardController',
             controllerAs: 'dc'
+        }).state('notavailable', {
+            url:'/notavailable',
+            templateUrl: '/app/partials/notFound.html'
         });
 
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/notavailable');
     }
 }());

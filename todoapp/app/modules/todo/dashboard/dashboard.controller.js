@@ -10,12 +10,6 @@
     function DashboardController() {
 
         var dc = this;
-
-        dc.sayHi = sayHi;
-
-        function sayHi() {
-            console.log('heyyy');
-            return 'Hii, Welcome to todo app!!';
-        }
+        dc.testMsg="Welcome to angular world!!";
     }
 }());
