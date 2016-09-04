@@ -14,12 +14,20 @@
   <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app/bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="app/bower_components/angular-bootstrap/ui-bootstrap-csp.css">
-  <link rel="stylesheet" href="app/app.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="app/css/app.css">
+  <link href="app/css/bootstrap.min.css" rel="stylesheet">
   <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <div ui-view></div>
+
+  <!--header-->
+  <div ng-include="'app/partials/header.html'"></div>
+
+  <!--body-->
+  <div class="view-body" ui-view></div>
+
+  <!--footer-->
+  <div ng-include="'app/partials/footer.html'"></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -35,5 +43,8 @@
   <script src="app/modules/todo/app.run.js"></script>
   <script src="app/modules/todo/dashboard/dashboard.module.js"></script>
   <script src="app/modules/todo/dashboard/dashboard.controller.js"></script>
+  <script src="app/modules/todo/dashboard/dashboard.factory.js"></script>
+  <script src="app/filters/initcap.js"></script>
+  <script src="app/directives/task-box.js"></script>
 </body>
 </html>

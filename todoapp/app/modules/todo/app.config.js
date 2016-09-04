@@ -23,4 +23,4 @@
 
         $urlRouterProvider.otherwise('/notavailable');
     }
-}());
+})();

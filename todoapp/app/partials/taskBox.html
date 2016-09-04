@@ -1,0 +1,29 @@
+<div  class="task-box">
+    <div class="pad-5x">
+        <div class="col-sm-8 col-md-8 col-lg-8 thin-bottom-border">{{task.name}}</div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="pull-right">
+                <i class="fa fa-trash-o fa-2x"></i>&nbsp;&nbsp;
+                <input type="checkbox" ng-model="tasSelector" class="task-checbox">
+            </div>
+        </div>
+    </div>
+    <div class="pad-10x">
+        <div>
+            <label>Description: </label>
+            <span>{{task.description}}</span>
+        </div>
+        <div>
+            <label>Status: </label>
+                <span class="capitalize">
+                {{task.status | initcap}}
+                </span></div>
+        <div>
+            <label>Start date: </label>
+            <span>{{task['start-date']}}</span></div>
+        <div>
+            <label>Priority: </label>
+            <span>{{task.priority | initcap}}</span>
+        </div>
+    </div>
+</div>
