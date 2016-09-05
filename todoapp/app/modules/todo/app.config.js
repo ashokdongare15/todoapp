@@ -28,8 +28,8 @@
             prefix: 'app/i18n/messages-',
             suffix: '.json'
         });
-        $translateProvider.preferredLanguage('en_US')
-            .fallbackLanguage('en_US');
+        $translateProvider.preferredLanguage('en')
+            .fallbackLanguage('en');
 
         // Enable escaping of HTML
         $translateProvider.useSanitizeValueStrategy('sanitize');

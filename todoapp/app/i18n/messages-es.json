@@ -1,0 +1,11 @@
+{
+  "app.name": "TODOApp",
+  "app.tag.line": "Administrar sus tareas",
+  "app.copy.rights.txt": "Desarrollado por SemanticBits",
+  "task.description.label": "Descripcion",
+  "task.status.label": "Estado",
+  "task.start.date.label": "Start date",
+  "task.end.date.label": "Fecha de inicio",
+  "task.priority.label": "Prioridad",
+  "add.task.label": "Añadir nueva tarea"
+}
