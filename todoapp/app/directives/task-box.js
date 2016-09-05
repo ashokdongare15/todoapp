@@ -13,6 +13,7 @@
             scope: {
                 task: '=taskObj'
             },
+            replace:true,
             templateUrl: '/app/partials/taskBox.html'
         };
     }

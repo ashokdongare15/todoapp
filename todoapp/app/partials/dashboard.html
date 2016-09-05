@@ -17,8 +17,8 @@
     </div><br/>
     <!--task details-->
     <div class="task-section thin-bottom-top row">
-        <div ng-repeat="task in dc.tasksList | filter:selectedStatus">
+        <task ng-repeat="task in dc.tasksList | filter:selectedStatus">
             <render-task task-obj="task"></render-task>
-        </div>
+        </task>
     </div>
 </div>
