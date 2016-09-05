@@ -1,0 +1,11 @@
+{
+  "app.name": "TODOApp",
+  "app.tag.line": "Manage your tasks",
+  "app.copy.rights.txt": "Powered by SemanticBits",
+  "task.description.label": "Description",
+  "task.status.label": "status",
+  "task.start.date.label": "Start date",
+  "task.end.date.label": "End date",
+  "task.priority.label": "Priority",
+  "add.task.label.txt": "Add New Task"
+}

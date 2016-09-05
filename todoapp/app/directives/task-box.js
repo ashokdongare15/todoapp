@@ -11,7 +11,7 @@
         return {
             restrict: 'E',
             scope: {
-                taskInfo: '=taskDetails'
+                task: '=taskObj'
             },
             templateUrl: '/app/partials/taskBox.html'
         };

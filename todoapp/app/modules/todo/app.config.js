@@ -5,9 +5,9 @@
         .module('todo')
         .config(appConfig);
 
-    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$translateProvider'];
     
-    function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+    function appConfig($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider ) {
         // use the HTML5 History API
         $locationProvider.html5Mode(true);
 
@@ -22,5 +22,16 @@
         });
 
         $urlRouterProvider.otherwise('/notavailable');
+
+        // add translation table
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'app/i18n/messages-',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('en_US')
+            .fallbackLanguage('en_US');
+
+        // Enable escaping of HTML
+        $translateProvider.useSanitizeValueStrategy('sanitize');
     }
 })();

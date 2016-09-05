@@ -3,48 +3,22 @@
     <div class="task-filter row">
         <div class="col-sm-4 col-md-4 col-lg-4">
 
-            <select ng-model="selectedStatus" class="form-control">
+            <select ng-model="selectedStatus.status" class="form-control">
                 <option value="">-Please select-</option> <!-- not selected / blank option -->
                 <option ng-repeat="taskStatus in dc.taskStatuses"
                         value="{{taskStatus}}">{{taskStatus}}</option> <!-- options -->
             </select>
         </div>
         <div class="col-sm-8 col-md-8 col-lg-8">
-            <button class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add New Task</button>
+            <button class="btn btn-primary pull-right">
+                <i class="fa fa-plus"></i> <span ng-bind="'add.task.label.txt' | translate"></span>
+            </button>
         </div>
     </div><br/>
     <!--task details-->
     <div class="task-section thin-bottom-top row">
-        <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="task in dc.tasksList">
-            <div  class="task-box">
-                <div class="pad-5x">
-                    <div class="col-sm-8 col-md-8 col-lg-8 thin-bottom-border">{{task.name}}</div>
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <div class="pull-right">
-                            <i class="fa fa-trash-o fa-2x"></i>&nbsp;&nbsp;
-                            <input type="checkbox" ng-model="tasSelector" class="task-checbox">
-                        </div>
-                    </div>
-                </div>
-                <div class="pad-10x">
-                    <div>
-                        <label>Description: </label>
-                        <span>{{task.description}}</span>
-                    </div>
-                    <div>
-                        <label>Status: </label>
-                <span class="capitalize">
-                {{task.status | initcap}}
-                </span></div>
-                    <div>
-                        <label>Start date: </label>
-                        <span>{{task['start-date']}}</span></div>
-                    <div>
-                        <label>Priority: </label>
-                        <span>{{task.priority | initcap}}</span>
-                    </div>
-                </div>
-            </div>
+        <div ng-repeat="task in dc.tasksList | filter:selectedStatus">
+            <render-task task-obj="task"></render-task>
         </div>
     </div>
 </div>
