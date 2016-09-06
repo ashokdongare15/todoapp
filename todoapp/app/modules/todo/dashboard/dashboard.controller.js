@@ -10,10 +10,10 @@
     function DashboardController($scope, $rootScope, taskService) {
         var dc = this;
         dc.taskStatuses= ['Completed', 'Draft', 'Inprogress', 'Rejected', 'Invalid'];
-        dc.tasksList = $rootScope.ALL_TASKS;
 
-        /*dc.loadAllTasks = loadAllTasks;
-        load all tasks at run time
+        dc.loadAllTasks = loadAllTasks;
+
+        //load all tasks at run time
         loadAllTasks();
         function loadAllTasks() {
             taskService.getAllTasks().then(function(response) {
@@ -21,6 +21,6 @@
             }, function(error){
                 console.log(error.data.errors);
             });
-        }*/
+        }
     }
 }());
