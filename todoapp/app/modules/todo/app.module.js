@@ -6,7 +6,8 @@
         'ngSanitize',
         'ui.bootstrap',
         'pascalprecht.translate',
-        'todo.dashboard'
+        'todo.dashboard',
+        '720kb.datepicker'
     ]);
 
 })();

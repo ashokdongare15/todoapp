@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add Task</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form class="form-horizontal margin-10x" name="addTaskForm">
+        <!--name-->
+        <label for="name" translate="task.name.label"></label><span class="required-indicator">*</span>:
+        <input type="text" id="name" name="name"  ng-model="task.name" class="form-control" required/>
+        <div ng-show="addTaskForm.$submitted || addTaskForm.name.$touched">
+            <span class="error" ng-show="addTaskForm.name.$error.required">Name is required.</span>
+        </div>
+
+        <!--description-->
+        <label for="description" translate="task.description.label"></label><span class="required-indicator">*</span>:
+        <textarea ng-model="task.description" id="description" name="description" class="form-control" required/>
+        <div ng-show="addTaskForm.$submitted || addTaskForm.description.$touched">
+            <span class="error" ng-show="addTaskForm.description.$error.required">Description is required.</span>
+        </div>
+
+        <!--start date-->
+        <label for="startDate" translate="task.start.date.label"></label><span class="required-indicator">*</span>:
+        <datepicker date-format="dd/MM/yyyy">
+            <input ng-model="task.startDate" id="startDate" name="startDate" class="form-control" placeholder="dd/MM/yyyy" required/>
+            <div ng-show="addTaskForm.$submitted || addTaskForm.startDate.$touched">
+                <span class="error" ng-show="addTaskForm.startDate.$error.required" translate="task.start.date.required.msg"></span>
+            </div>
+        </datepicker>
+        <br/>
+
+        <!--end date-->
+        <label for="endDate" translate="task.end.date.label"></label><span class="required-indicator">*</span>:
+        <datepicker date-format="dd/MM/yyyy">
+            <input ng-model="task.endDate"  id="endDate" name="endDate" class="form-control" placeholder="dd/MM/yyyy" required/>
+            <div ng-show="addTaskForm.$submitted || addTaskForm.endDate.$touched">
+                <span class="error" ng-show="addTaskForm.endDate.$error.required" translate="task.end.date.required.msg"></span>
+            </div>
+        </datepicker>
+        <br/>
+
+        <!--priority-->
+        <label for="priority" translate="task.priority.label"></label><span class="required-indicator">*</span>:
+        <select ng-model="task.priority" id="priority" name="priority" class="form-control" required>
+            <option value="">-Please select-</option> <!-- not selected / blank option -->
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <div ng-show="addTaskForm.$submitted || addTaskForm.priority.$touched">
+            <span class="error" ng-show="addTaskForm.priority.$error.required" translate="task.priority.required.msg"></span>
+        </div>
+        <br>
+
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="">Add</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel();">Cancel</button>
+</div>

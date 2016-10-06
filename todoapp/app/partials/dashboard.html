@@ -2,7 +2,7 @@
     <!--task filter-->
     <div class="task-filter row">
         <div class="col-sm-4 col-md-4 col-lg-4">
-
+            <!--select box to filter tasks-->
             <select ng-model="selectedStatus.status" class="form-control">
                 <option value="">-Please select-</option> <!-- not selected / blank option -->
                 <option ng-repeat="taskStatus in dc.taskStatuses"
@@ -10,7 +10,8 @@
             </select>
         </div>
         <div class="col-sm-8 col-md-8 col-lg-8">
-            <button class="btn btn-primary pull-right">
+            <!--add new tasks button-->
+            <button class="btn btn-primary pull-right" ng-click="dc.renderAddTaskForm();">
                 <i class="fa fa-plus"></i> <span ng-bind="'add.task.label.txt' | translate"></span>
             </button>
         </div>

@@ -37,5 +37,23 @@
   background-color: white;
 }
 .footer-contents {
-  margin-top: 12px; font-size: 16px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.inline-display {
+  display: inline;
+}
+.margin-10x {
+  margin: 10px;
+}
+.error {
+  color: red;
+}
+
+.required-indicator {
+  color: red;
 }
